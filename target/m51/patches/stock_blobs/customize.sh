@@ -13,8 +13,8 @@ ADD_TO_WORK_DIR "a52qnsxx" "system" "system/lib64/libsamsungSoundbooster_plus_le
 echo "Fix MIDAS"
 DELETE_FROM_WORK_DIR "vendor" "etc/midas"
 DELETE_FROM_WORK_DIR "vendor" "etc/VslMesDetector"
-ADD_TO_WORK_DIR "a52qnsxx" "vendor" "etc/midas" 0 2000 755 "u:object_r:vendor_configs_file:s0"
-ADD_TO_WORK_DIR "a52qnsxx" "vendor" "etc/VslMesDetector" 0 2000 755 "u:object_r:vendor_configs_file:s0"
+#ADD_TO_WORK_DIR "a52qnsxx" "vendor" "etc/midas" 0 2000 755 "u:object_r:vendor_configs_file:s0"
+#ADD_TO_WORK_DIR "a52qnsxx" "vendor" "etc/VslMesDetector" 0 2000 755 "u:object_r:vendor_configs_file:s0"
 sed -i "s/ro.product.device/ro.product.vendor.device/g" "$WORK_DIR/vendor/etc/midas/midas_config.json"
 
 echo "Fix RIL"
