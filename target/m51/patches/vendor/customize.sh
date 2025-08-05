@@ -3,9 +3,9 @@ DELETE_FROM_WORK_DIR "vendor" "etc/midas"
 ADD_TO_WORK_DIR "a73xqxx" "vendor" "etc/midas"
 LOG_STEP_OUT
 
-LOG_STEP_IN "- Fixing MIDAS model detection [m52xq --> a73xq]"
-sed -i "s/m52xq/dummy/g" "$WORK_DIR/vendor/etc/midas/midas_config.json"
-sed -i "s/a73xq/m52xq/g" "$WORK_DIR/vendor/etc/midas/midas_config.json"
+LOG_STEP_IN "- Fixing MIDAS model detection [m51 --> a73xq]"
+sed -i "s/m51/dummy/g" "$WORK_DIR/vendor/etc/midas/midas_config.json"
+sed -i "s/a73xq/m51/g" "$WORK_DIR/vendor/etc/midas/midas_config.json"
 sed -i "s/ro.product.device/ro.product.vendor.device/g" "$WORK_DIR/vendor/etc/midas/midas_config.json"
 
 if ! grep -q "vendor_firmware_file (file (mounton" "$WORK_DIR/vendor/etc/selinux/vendor_sepolicy.cil"; then
